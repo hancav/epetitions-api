@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('category');
             $table->text('description');
+            $table->string('author');
             $table->integer('signees');
             $table->timestamps();
         });
