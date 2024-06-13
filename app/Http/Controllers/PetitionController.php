@@ -13,6 +13,8 @@ class PetitionController extends Controller
     public function index()
     {
         //
+        $petitions = Petition::all();
+        return response()->json($petitions);
     }
 
     /**
