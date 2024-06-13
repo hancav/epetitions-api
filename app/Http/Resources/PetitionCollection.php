@@ -16,6 +16,8 @@ class PetitionCollection extends ResourceCollection
     {
         return [
             'data' => $this->collection,
+            'version' => '0.0.1',
+            'author' => 'John Doe',
         ];
     }
 }

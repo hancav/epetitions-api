@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Petition;
 use Illuminate\Http\Request;
+use App\Http\Resources\PetitionResource;
+use App\Http\Resources\PetitionCollection;
 
 class PetitionController extends Controller
 {
@@ -13,8 +15,8 @@ class PetitionController extends Controller
     public function index()
     {
         //
-        $petitions = Petition::all();
-        return response()->json($petitions);
+        return new PetitionCollection(Petition::all()); // from petition collection
+        //return PetitionResource::collection(Petition::all()); // from petition resource
     }
 
     /**
