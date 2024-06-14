@@ -10,7 +10,9 @@ use App\Http\Resources\PetitionCollection;
 class PetitionController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * [index description]
+     *
+     * @return  [type]  [return description]
      */
     public function index()
     {
@@ -20,8 +22,12 @@ class PetitionController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     */
+    * [store description]
+    *
+    * @param   Request  $request  [$request description]
+    *
+    * @return  [type]             [return description]
+    */
     public function store(Request $request)
     {
         //
@@ -33,11 +39,16 @@ class PetitionController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
+    * [show description]
+    *
+    * @param   Petition  $petition  [$petition description]
+    *
+    * @return  [type]               [return description]
+    */
     public function show(Petition $petition)
     {
         //
+        return new PetitionResource($petition);
     }
 
     /**
