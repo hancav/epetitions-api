@@ -70,5 +70,6 @@ class PetitionController extends Controller
     public function destroy(Petition $petition)
     {
         //
+        $petition->delete();
     }
 }
