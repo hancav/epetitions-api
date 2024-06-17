@@ -33,21 +33,19 @@ Provide step-by-step instructions on how to install and set up your project. Inc
 11. go to http://localhost:8080/ and login as: sail:password to check db
 12. Done ...
 
-...
 If necessary grant privileges to user sail on mysql server:
 Goto mysql-server exec on docker:
--- Log in to MySQL
+- Log in to MySQL
 mysql -u root -p
 (password)
--- Create the user (if not already created)
+- Create the user (if not already created)
 CREATE USER 'sail'@'localhost' IDENTIFIED BY 'password';
--- Grant all privileges to the user for the specific database
+- Grant all privileges to the user for the specific database
 GRANT ALL PRIVILEGES ON e_petitions_db1.* TO 'sail'@'localhost';
--- Flush privileges to apply changes
+- Flush privileges to apply changes
 FLUSH PRIVILEGES;
 exit;
--
- - for migrations use always:
+- for migrations use always:
 sail artisan migrate
 
 ## Usage
